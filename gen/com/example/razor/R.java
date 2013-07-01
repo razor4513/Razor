@@ -19,26 +19,30 @@ public final class R {
         public static final int bAdd=0x7f080001;
         public static final int bDiv=0x7f080004;
         public static final int bMult=0x7f080003;
-        public static final int bResults=0x7f08000d;
+        public static final int bResults=0x7f080010;
+        public static final int bSetWall=0x7f08000e;
         public static final int bSub=0x7f080002;
         public static final int btnSend=0x7f08000b;
         public static final int etAction=0x7f080009;
-        public static final int etCommands=0x7f08000c;
+        public static final int etCommands=0x7f08000f;
         public static final int etEmails=0x7f080005;
         public static final int etIntro=0x7f080006;
         public static final int etName=0x7f080007;
         public static final int etOut=0x7f08000a;
         public static final int etThings=0x7f080008;
-        public static final int menu_settings=0x7f080010;
-        public static final int tbPassword=0x7f08000e;
+        public static final int ibTakePic=0x7f08000d;
+        public static final int ivReturnedPicture=0x7f08000c;
+        public static final int menu_settings=0x7f080013;
+        public static final int tbPassword=0x7f080011;
         public static final int tvDisplay=0x7f080000;
-        public static final int tvResults=0x7f08000f;
+        public static final int tvResults=0x7f080012;
     }
     public static final class layout {
         public static final int activity_startingpoint=0x7f030000;
         public static final int email=0x7f030001;
-        public static final int splash=0x7f030002;
-        public static final int text=0x7f030003;
+        public static final int photo=0x7f030002;
+        public static final int splash=0x7f030003;
+        public static final int text=0x7f030004;
     }
     public static final class menu {
         public static final int activity_startingpoint=0x7f070000;
