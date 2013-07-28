@@ -1,10 +1,12 @@
 package com.example.razor;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,6 +28,8 @@ public class Camera extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.photo);
 		init();
+		InputStream in = getResources().openRawResource(R.drawable.background);
+		bmp = BitmapFactory.decodeStream(in);
 	}
 
 	private void init() {
