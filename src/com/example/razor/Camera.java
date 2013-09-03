@@ -24,7 +24,6 @@ public class Camera extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.photo);
 		init();
@@ -49,7 +48,6 @@ public class Camera extends Activity implements OnClickListener {
 					getApplicationContext().setWallpaper(bmp);
 					}
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			break;
@@ -63,7 +61,6 @@ public class Camera extends Activity implements OnClickListener {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		if(resultCode == RESULT_OK){
 			Bundle extras = data.getExtras();

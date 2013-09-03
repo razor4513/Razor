@@ -38,7 +38,6 @@ public class TextPlay extends Activity implements View.OnClickListener {
 	}
 
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.bResults:
 			String check = input.getText().toString();

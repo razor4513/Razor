@@ -1,6 +1,7 @@
 package com.example.razor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 public class OpenedClass extends Activity implements OnClickListener,
 		OnCheckedChangeListener {
+	String sendData = "";
 	TextView question;
 	TextView test;
 	Button returnData;
@@ -27,8 +29,10 @@ public class OpenedClass extends Activity implements OnClickListener,
 		setContentView(R.layout.send);
 		init();
 		Bundle gotBasket = getIntent().getExtras();
+		if(gotBasket != null){
 		gotBread = gotBasket.getString("key");
 		question.setText(gotBread);
+		}
 	}
 
 	public void init() {
@@ -37,28 +41,34 @@ public class OpenedClass extends Activity implements OnClickListener,
 		returnData.setOnClickListener(this);
 		selectionList = (RadioGroup) findViewById(R.id.rg_answers);
 		selectionList.setOnCheckedChangeListener(this);
+		test = (TextView)findViewById(R.id.hi);
 
 	}
 
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
+		Intent person = new Intent();
+		Bundle bundle = new Bundle();
+		bundle.putString("answer", sendData);
+		person.putExtras(bundle);
+		setResult(RESULT_OK, person);
+		finish();
 	}
 
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
-		// TODO Auto-generated method stub
 		switch (checkedId) {
 		case R.id.r_crazy:
-
+			sendData = "probably";
 			break;
 		case R.id.r_sexy:
+			sendData = "Definately";
 			break;
 		case R.id.r_both:
+			sendData = "Spot on";
 			break;
-
 		default:
 			break;
 		}
+		test.setText(sendData);
 
 	}
 

@@ -14,7 +14,7 @@ public class Data extends Activity implements OnClickListener {
 	private EditText send;
 	private Button startActivity;
 	private Button startForResult;
-	private TextView got;
+	private TextView gotAnswer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Data extends Activity implements OnClickListener {
 		send = (EditText)findViewById(R.id.etSend);
 		startActivity = (Button)findViewById(R.id.bstart);
 		startForResult = (Button)findViewById(R.id.bstartForResult);
-		got = (TextView) findViewById(R.id.tvgot);
+		gotAnswer = (TextView) findViewById(R.id.tvgot);
 		startActivity.setOnClickListener(this);
 		startForResult.setOnClickListener(this);
 
@@ -37,6 +37,8 @@ public class Data extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.bstartForResult:
+			Intent i = new Intent(Data.this, OpenedClass.class);
+			startActivityForResult(i, 0);
 			
 			break;
 		case R.id.bstart:
@@ -51,6 +53,15 @@ public class Data extends Activity implements OnClickListener {
 
 		default:
 			break;
+		}
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if(resultCode == RESULT_OK){
+			Bundle bundle = data.getExtras();
+			String s = bundle.getString("answer");
+			gotAnswer.setText(s);
 		}
 	}
 
