@@ -16,6 +16,7 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
+        public static final int about_us=0x7f08001f;
         public static final int bAdd=0x7f080001;
         public static final int bDiv=0x7f080004;
         public static final int bMult=0x7f080003;
@@ -38,6 +39,7 @@ public final class R {
         public static final int ibTakePic=0x7f080011;
         public static final int ivReturnedPicture=0x7f080010;
         public static final int menu_settings=0x7f08001e;
+        public static final int preferences=0x7f080020;
         public static final int r_both=0x7f080017;
         public static final int r_crazy=0x7f080015;
         public static final int r_sexy=0x7f080016;
@@ -59,6 +61,7 @@ public final class R {
     }
     public static final class menu {
         public static final int activity_startingpoint=0x7f070000;
+        public static final int cool_menu=0x7f070001;
     }
     public static final class raw {
         public static final int soundfile=0x7f040000;
