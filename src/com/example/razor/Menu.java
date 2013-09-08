@@ -4,9 +4,11 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class Menu extends ListActivity {
 	String classes[] = { "Startingpoint", "TextPlay", "Email", "Camera",
@@ -40,5 +42,22 @@ public class Menu extends ListActivity {
 		blowUp.inflate(R.menu.cool_menu, menu);
 		return true;
 	}
-	
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+
+		case R.id.preferences:
+			Toast.makeText(getApplicationContext(), "preferences not implemented yet", Toast.LENGTH_SHORT);
+			return true;
+		case R.id.about_us:
+			Toast.makeText(getApplicationContext(), "about us not implemented yet", Toast.LENGTH_SHORT);
+			return true;
+
+		default:
+			return false;
+		}
+
+	}
+
 }
